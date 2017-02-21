@@ -8,6 +8,34 @@
     Tool Content
     <p><button class="btn btn default" (click)="clickme()">click me please!</button>
     </p>
+
+
+    <div class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Form Name</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Agent:</label>  
+  <div class="col-md-4">
+    <ng2-completer [(ngModel)]="searchStr" [dataService]="dataService" [minSearchLength]="3" class="form-control input-md"></ng2-completer>`
+<!--
+  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">-->
+  <span class="help-block">Please enter 3 or more characters</span>  
+  </div>
+</div>
+
+</fieldset>
+</div>
+
+
+
+
+
+
+    Agents: 
   </div>
   <div class="panel-footer">
 

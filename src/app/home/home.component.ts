@@ -7,9 +7,6 @@ import { ITool } from './../models/tool';
 
 
 
-
-
-
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
@@ -20,17 +17,15 @@ export class HomeComponent extends Localization implements OnInit {
     pi: number;
     value: number;
        errorMessage: string;
-
-
-
      myTools: ITool[];
-
+    
   
   public  test(): void {
     alert('test');
   }
 
-      constructor(public toastr: ToastsManager, public vcr: ViewContainerRef, public locale: LocaleService, public translation: TranslationService,
+      constructor(public toastr: ToastsManager, public vcr: ViewContainerRef, public locale: LocaleService,
+       public translation: TranslationService,
       private _router: Router) {
         super(locale, translation);
          this.today = Date.now();
@@ -38,6 +33,9 @@ export class HomeComponent extends Localization implements OnInit {
         this.value = Math.round(Math.random() * 1000000) / 100;
          // Use with angular v2.2 or above
          this.toastr.setRootViewContainerRef(vcr);
+
+
+
       }
       
       showSuccess() {
@@ -100,14 +98,4 @@ export class HomeComponent extends Localization implements OnInit {
       goToLink (link: string) {
       this._router.navigate(['/'+link]);
     }
-
-//     clickme() {
-
-// console.log(this.myTools);
-//     }
-    
-
-
-
-      
   }

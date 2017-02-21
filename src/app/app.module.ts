@@ -4,6 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router'
 
+import { Ng2CompleterModule } from "ng2-completer";
+
+
 
 import { AppComponent } from './app.component';
 import { AlertModule, DropdownModule, AccordionModule  } from 'ng2-bootstrap';
@@ -21,6 +24,8 @@ import { Error404Component } from './errors/404.component'
 import { AuthService } from './user/auth.service'
 import { ThingService } from './services/thing.service'
 import { ReportService } from './services/report.service'
+import { ToolService } from './services/tool.service'
+
 
 import { ThingDetailGuard } from './guards/thing-detail-guard'
 
@@ -59,6 +64,7 @@ import { GenericToolComponent } from './generic-tool/generic-tool.component'
     AccordionModule.forRoot(),
     ToastModule.forRoot(),
     BrowserModule,
+    Ng2CompleterModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
@@ -69,7 +75,8 @@ import { GenericToolComponent } from './generic-tool/generic-tool.component'
         AuthService,
         ThingService,
         ThingDetailGuard,
-        ReportService
+        ReportService,
+        ToolService
   ],
   bootstrap: [AppComponent]
 })
