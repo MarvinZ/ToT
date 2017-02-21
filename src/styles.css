@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+.backBtn {
+  background: #f4511e;
+  background-image: -webkit-linear-gradient(top, #f4511e, #c9512c);
+  background-image: -moz-linear-gradient(top, #f4511e, #c9512c);
+  background-image: -ms-linear-gradient(top, #f4511e, #c9512c);
+  background-image: -o-linear-gradient(top, #f4511e, #c9512c);
+  background-image: linear-gradient(to bottom, #f4511e, #c9512c);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  float: right;
+  width:120px;
+  height:60px;
+}
+
+.backBtn:hover {
+  background: #d94214;
+  background-image: -webkit-linear-gradient(top, #d94214, #bd3c15);
+  background-image: -moz-linear-gradient(top, #d94214, #bd3c15);
+  background-image: -ms-linear-gradient(top, #d94214, #bd3c15);
+  background-image: -o-linear-gradient(top, #d94214, #bd3c15);
+  background-image: linear-gradient(to bottom, #d94214, #bd3c15);
+  text-decoration: none;
+}
+
+.backBtn span {
+  width: 75%;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.backBtn span:after {
+  content: '\00Ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -50px;
+  transition: 0.8s;
+}
+
+.backBtn:hover span {
+  padding-left: 25px;
+}
+
+.backBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
