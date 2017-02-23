@@ -20,22 +20,110 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Agent:</label>  
   <div class="col-md-4">
-    <ng2-completer [(ngModel)]="searchStr" [dataService]="dataService" [minSearchLength]="3" class="form-control input-md"></ng2-completer>`
+    <ng2-completer [(ngModel)]="searchStr" [dataService]="dataService" [minSearchLength]="3" [maxChars]="7"
+    [autoMatch]="true" [autofocus]="true" 
+    [placeholder]="agentPlaceHolder" class="form-control input-md" ></ng2-completer>
+
+    <!--https://www.npmjs.com/package/ng2-completer-->
+
+
 <!--
   <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">-->
   <span class="help-block">Please enter 3 or more characters</span>  
   </div>
+
+
+  <label class="col-md-4 control-label" for="textinput">Start date:</label>  
+  <div class="col-md-4">
+
+        <datepicker [(ngModel)]="startDate" ></datepicker>
+
+  </div>
+    <label class="col-md-4 control-label" for="textinput">End date:</label>  
+  <div class="col-md-4">
+
+        <datepicker [(ngModel)]="endDate"></datepicker>
+
+  </div>
+
 </div>
+
+
+    <label class="col-md-4 control-label" for="textinput">Drop down:</label>  
+
 
 </fieldset>
 </div>
 
+<!--<div style="width: 300px; margin-bottom: 20px;">
+  <h3>Select a single city</h3>
+  <ng-select [allowClear]="true"
+              [items]="items"
+              [disabled]="disabled"
+              (data)="refreshValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              (typed)="typed($event)"
+              placeholder="No city selected">
+  </ng-select>
+  <p></p>
+  <div>
+    <button type="button" class="btn btn-primary"
+            [(ngModel)]="disabledV" btnCheckbox
+            btnCheckboxTrue="1" btnCheckboxFalse="0">
+      {{disabled === '1' ? 'Enable' : 'Disable'}}
+    </button>
+  </div>
+</div>-->
+
+<div style="width: 300px; margin-bottom: 20px;">
+  <h3>Select multiple cities</h3>
+  <ng-select  [multiple]="true"
+              [items]="items"
+              [disabled]="disabled"
+              (data)="refreshValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              placeholder="No city selected"></ng-select>
+  <!--<pre>{{itemsToString(value)}}</pre>-->
+  <div>
+    <!--<button type="button" class="btn btn-primary"
+            [(ngModel)]="disabledV" btnCheckbox
+            btnCheckboxTrue="1" btnCheckboxFalse="0">
+      {{disabled === '1' ? 'Enable' : 'Disable'}}
+    </button>-->
+  </div>
+</div>
+
+
+<!--http://valor-software.com/ng2-select/-->
+
+  <pre>{{searchStr}}, {{startDate }}, {{endDate}}
+, {{value | json}}</pre>
+
+
+
+<ul>
+  <li>validar agent</li>
+  <li>ojo con time zone</li>
+</ul>
+
+<button class="btn btn-tool">Holis</button>
+
+<button class="btn btn-default">Holis</button>
+<button class="btn btn-success">Holis</button>
+
+<button class="btn btn-danger">Holis</button>
+
+<button class="btn btn-primary">Holis</button>
+
+
+<button class="btn btn-info">Holis</button>
 
 
 
 
 
-    Agents: 
   </div>
   <div class="panel-footer">
 

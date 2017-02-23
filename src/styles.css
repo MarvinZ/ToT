@@ -54,3 +54,20 @@
   opacity: 1;
   right: 0;
 }
+
+.btn-tool {
+  color: #fff;
+  background-color: #e67e22;
+  border-color: #7f8c8d;
+}
+.btn-tool:focus,
+.btn-tool.focus {
+  color: #fff;
+  background-color: #d35400;
+  border-color: #122b40;
+}
+.btn-tool:hover {
+  color: #fff!important;
+  background-color: #d35400;
+  border-color: #7f8c8d;
+}

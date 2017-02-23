@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router'
 
 import { Ng2CompleterModule } from "ng2-completer";
 
+import { DatepickerModule } from 'ng2-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -33,6 +34,9 @@ import { ThingDetailGuard } from './guards/thing-detail-guard'
 import { LocalizationModule } from 'angular-l10n';
 
 import { ThingFilterPipe } from './filters/thing-filter.pipe'
+
+import {SelectModule} from 'ng2-select';
+
 
 import {} from './models'
 
@@ -63,9 +67,11 @@ import { GenericToolComponent } from './generic-tool/generic-tool.component'
     DropdownModule.forRoot(),
     AccordionModule.forRoot(),
     ToastModule.forRoot(),
+    DatepickerModule.forRoot(),
     BrowserModule,
     Ng2CompleterModule,
     RouterModule.forRoot(appRoutes),
+    SelectModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
