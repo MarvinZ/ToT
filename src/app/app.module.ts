@@ -46,6 +46,8 @@ import { ThingDetailComponent } from './thing-detail/thing-detail.component';
 import { StarComponent } from './star/star.component';
 import { GenericToolComponent } from './generic-tool/generic-tool.component'
 
+import { MyDatePickerModule } from 'mydatepicker';
+import { MyDateRangePickerModule } from 'mydaterangepicker';
 
 
 @NgModule({
@@ -75,7 +77,9 @@ import { GenericToolComponent } from './generic-tool/generic-tool.component'
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    LocalizationModule.forRoot()
+    LocalizationModule.forRoot(),
+    MyDatePickerModule,
+    MyDateRangePickerModule 
   ],
   providers: [    
         AuthService,
